@@ -3,19 +3,15 @@ from flask import Blueprint, render_template
 auth = Blueprint('auth', __name__)
 
 @auth.route('/signup')
-
 def signup():
-    return 'This page will be used to sign up users.'
-
+    return render_template('signup.html')
 
 
 @auth.route('/login')
-
 def login():
-    return 'This page will be used to log in users.'
+    return render_template('login.html')
 
 
 @auth.route('/logout')
-
 def logout():
-    return 'TUse this to log out.'
+    return 'Use this to log out.'
